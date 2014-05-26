@@ -50,7 +50,7 @@ public class PA1Node extends Node {
 			
 			switch(msg.type) {
 				case PA1Message.PROPOSE:
-					rps = new PA1Message(PA1Message.AGREE, this);
+					rps = new PA1Message(PA1Message.AGREE, this, lastAcceptedID);
 					send(rps, msg.sender);
 					break;
 					
